@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @gundam %>
+
+<div>
+  <%= link_to "Edit this gundam", edit_gundam_path(@gundam) %> |
+  <%= link_to "Back to gundams", gundams_path %>
+
+  <%= button_to "Destroy this gundam", @gundam, method: :delete %>
+</div>

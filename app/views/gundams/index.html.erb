@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Gundams</h1>
+<%= form_tag(gundams_path, method: :get) do %>
+  <%= text_field_tag :search, params[:search], placeholder: 'Search Gundams' %>
+  <%= submit_tag 'Search' %>
+<% end %>
+<div id="gundams">
+  <% @gundams.each do |gundam| %>
+    <div class="list-container">
+    <%= render gundam %>
+    <p>
+      <%= link_to "Show this gundam", gundam %>
+    </p>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "New gundam", new_gundam_path %>
